@@ -14,7 +14,7 @@
     <!-- Navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.php">Electrodomésticos</a>
+            <a class="navbar-brand" href="index.php">Infodomésticos</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -26,12 +26,12 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Ofertas</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Cocina</a></li>
-                            <li><a class="dropdown-item" href="#">Sala</a></li>
-                            <li><a class="dropdown-item" href="#">Dormitorio</a></li>
+                            <li><a class="dropdown-item" href="lblanca.php">Línea Blanca</a></li>
+                            <li><a class="dropdown-item" href="lmarron.php">Línea Marrón</a></li>
+                            <li><a class="dropdown-item" href="lgris.php">Línea Gris</a></li>
+                            <li><a class="dropdown-item" href="pae.php">PAE</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="anuncios.php">Anuncios</a></li>
                     <li class="nav-item"><a class="nav-link" href="contacto.php">Contacto</a></li>
                     <li class="nav-item"><a class="nav-link" href="sucursales.php">Sucursales</a></li>
                 </ul>

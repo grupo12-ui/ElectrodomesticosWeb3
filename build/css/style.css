@@ -1,0 +1,21 @@
+*
+{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    font-family: Oswald;
+}
+
+h2 {
+    color: #333;
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+footer {
+    background-color: #222;
+    color: #aaa;
+}
+
