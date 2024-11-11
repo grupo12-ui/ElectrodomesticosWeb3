@@ -34,6 +34,7 @@
                     </li>
                     <li class="nav-item"><a class="nav-link" href="contacto.php">Contacto</a></li>
                     <li class="nav-item"><a class="nav-link" href="sucursales.php">Sucursales</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.php">Iniciar Sesión</a></li>
                 </ul>
             </div>
         </div>
