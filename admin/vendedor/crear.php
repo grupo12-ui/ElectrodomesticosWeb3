@@ -4,8 +4,8 @@
 ?>
 <main class="contenedor seccion">
     <h1>Crear</h1>
-    <a href="/bienesraices/admin/index.php" class="boton boton-verde">Volver</a>
-    <form method="post" action="registrarvendedor.php" class="formulario">
+    <a href="/ElectrodomesticosWeb3/admin/indexAdmin.php" class="boton boton-verde">Volver</a>
+    <form method="post" action="registrar.php" class="formulario">
      <fieldset>
          <legend>Informacion General</legend>
          <label for="">Nombre:</label>
@@ -23,6 +23,5 @@
 
 </main>
 <?php
-  
-    include "../../includes/footer.php"
+    include "../../includes/templates/footer.php"
 ?>

@@ -4,25 +4,27 @@ include "../../includes/templates/header.php";
 
 $idp = intval($_GET['cod'] ?? 0);
 
-echo "El id de la propiedad es: " . $idp;
+echo "El id de la productos es: " . $idp;
+
 include "../../includes/config/database.php";
-$db = conectarBD();
+$db = conectarDB();
+
 if ($idp > 0) {
-    $consql = "DELETE FROM productos WHERE id = $idp";
+    $consql = "DELETE FROM productos WHERE idproducto = $idp";
     $res = mysqli_query($db, $consql);
 
     if ($res) {
         echo "
             <script>
-                alert('el producto se eliminó correctamente');
-                window.location.href = 'listado.php';
+                alert('La productos se eliminó correctamente');
+                window.location.href = 'listar.php';
             </script>
         ";
     } else {
-        echo "<p>No se pudo eliminar la propiedad.</p>";
+        echo "<p>No se pudo eliminar la producto.</p>";
     }
 } else {
-    echo "<p>ID de propiedad no válido.</p>";
+    echo "<p>ID de producto no válido.</p>";
 }
 ?>
 

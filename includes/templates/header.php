@@ -14,27 +14,27 @@
     <!-- Navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="index.php">Infodomésticos</a>
+            <a class="navbar-brand" href="/ElectrodomesticosWeb3/sindex.php">Infodomésticos</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.php">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="nosotros.php">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/ElectrodomesticosWeb3/index.php">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/ElectrodomesticosWeb3/nosotros.php">Nosotros</a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Ofertas</a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="lblanca.php">Línea Blanca</a></li>
-                            <li><a class="dropdown-item" href="lmarron.php">Línea Marrón</a></li>
-                            <li><a class="dropdown-item" href="lgris.php">Línea Gris</a></li>
-                            <li><a class="dropdown-item" href="pae.php">PAE</a></li>
+                            <li><a class="dropdown-item" href="/ElectrodomesticosWeb3/lblanca.php">Línea Blanca</a></li>
+                            <li><a class="dropdown-item" href="/ElectrodomesticosWeb3/lmarron.php">Línea Marrón</a></li>
+                            <li><a class="dropdown-item" href="/ElectrodomesticosWeb3/lgris.php">Línea Gris</a></li>
+                            <li><a class="dropdown-item" href="/ElectrodomesticosWeb3/pae.php">PAE</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="nav-link" href="contacto.php">Contacto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="sucursales.php">Sucursales</a></li>
-                    <li class="nav-item"><a class="nav-link" href="login.php">Iniciar Sesión</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/ElectrodomesticosWeb3/contacto.php">Contacto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/ElectrodomesticosWeb3/sucursales.php">Sucursales</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/ElectrodomesticosWeb3/login.php">Iniciar Sesión</a></li>
                 </ul>
             </div>
         </div>
