@@ -4,108 +4,55 @@
 ?>
 
     <section class="container my-5">
-        <h2>Sobre Nosotros</h2>
-        <p>Somos una empresa dedicada a ofrecer los mejores electrodomésticos para tu hogar, con un enfoque en calidad, innovación y satisfacción del cliente.</p>
-    </section>
+      <h2>Sobre Nosotros</h2>
+        <div class="row">
+          <div class="col-md-6">
+            <h3>Infodomésticos – Soluciones para el Hogar Moderno</h3>
+            <p>En Infodomésticos, nos especializamos en ofrecer una amplia gama de electrodomésticos 
+              de alta calidad para el hogar. Desde nuestros inicios, nuestra misión ha sido ayudar a 
+              nuestros clientes a crear espacios funcionales, cómodos y eficientes, con productos que 
+              simplifican la vida diaria. Sabemos que los electrodomésticos son una inversión importante 
+              y trabajamos para ofrecer una selección de marcas reconocidas y productos innovadores 
+              que combinen tecnología de punta con diseño estético.</p>
 
-            <h1>"Tecnología para tu día a día"  </h1> <br>
-            <div id="carouselExampleIndicators" class="carousel slide">
-                <div class="carousel-indicators">
-                    <br>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="img/baner1.jpg" class="d-block w-100 " alt="..."  >
-                  </div>
-                  <div class="carousel-item">
-                    <img src="img/baner2.jpg" class="d-block w-100 " alt="..."  >
-                  </div>
-                  <div class="carousel-item">
-                    <img src="img/baner3.jpg" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
-              <div class="caja1">
-            <div class="card" style="width: 18rem;">
-                <img src="img/2.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-text">Contamos con todo lo necesario para el funcionamiento del hogar.</p>
-                </div>
-              </div>
-            <div class="tex">
-              <p>Encuentre todas las novedades!</p> <br>
-                <p>Con precios accesibles para todo bolsillo</p>
-            </div> </div>
-              <div class="caja1">
-              <div class="card" style="width: 18rem;">
-                <img src="img/4.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-text">ElectroHogar es la tienda que usted necesita.</p>
-                </div>
-              </div></div>
-              <div class="caja1">
-              <div class="card" style="width: 18rem;">
-                <img src="img/7.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-text">Nuestros productos cuentan con garantia hasta por dos años.</p>
-                </div>
-              </div></div>
-              <div class="caja1">
-              <div class="card" style="width: 18rem;">
-                <img src="img/5.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <p class="card-text">Con creditos de hasta dos años.</p>
-                </div>
-              </div>
-            </div>
-            <div class="caja2">
-            <p>
-              <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Computadoras</a>
-              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Lavadoras</button>
-              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">Computadoras</button>
-              <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2 multiCollapseExample3">.</button>
-            </p>
-            <div class="row">
-              <div class="col">
-                <div class="collapse multi-collapse" id="multiCollapseExample1">
-                  <div class="card card-body">
-                    <img src="img/img1.jpg" class="card-img-top" alt="...">
-                    <img src="img/img2.jpg" class="card-img-top" alt="...">
+            <p>Nos enorgullece ser un referente en el mercado gracias a nuestro enfoque 
+              en la satisfacción del cliente y un servicio excepcional. Cada producto que 
+              ofrecemos ha sido cuidadosamente seleccionado para garantizar su durabilidad, 
+              eficiencia energética y funcionalidad. Nuestro equipo de expertos está siempre 
+              dispuesto a asesorarte y ayudarte a encontrar los electrodomésticos que mejor se 
+              adapten a tus necesidades.</p>
 
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="collapse multi-collapse" id="multiCollapseExample2">
-                  <div class="card card-body">
-                    <img src="img/img3.webp" class="card-img-top" alt="...">
-                    <img src="img/img4.jpg" class="card-img-top" alt="...">
-
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="collapse multi-collapse" id="multiCollapseExample3">
-                  <div class="card card-body">
-                    <img src="img/img5.webp" class="card-img-top" alt="...">
-                    <img src="img/img6.webp" class="card-img-top" alt="...">
-                  </div>
-                </div>
-              </div>
+            <p>En Infodomésticos, creemos en la importancia de un hogar bien equipado y en 
+              el poder de la tecnología para mejorar el estilo de vida. Nuestro compromiso es 
+              continuar ofreciendo productos de calidad, junto con un servicio al cliente que 
+              haga que cada experiencia de compra sea agradable y confiable.</p>
+          </div>
+          <div class="col-md-6">
+            <img src="build/img/img12.jpg" class="img-thumbnail" >
+        </div>
+      </div>
+        <div style="display:flex;">
+          <div class="card border-primary m-3" style="max-width: 50%;">
+            <div class="card-header"><h5>Nuestra misión:</h5></div>
+            <div class="card-body">
+              <p class="card-text">Proporcionar soluciones prácticas y modernas para cada 
+                hogar, haciendo la vida más fácil y cómoda a través de tecnología accesible
+                y de confianza.</p>
+          </div>
+          </div>
+          <div class="card border-primary m-3" style="max-width: 50%;">
+          <div class="card-header"><h5>Nuestra visión:</h5></div>
+            <div class="card-body">
+              <p class="card-text">Ser la empresa líder en el sector de electrodomésticos, 
+              reconocida por la calidad de nuestros productos y la satisfacción de nuestros 
+              clientes.</p>
             </div>
           </div>
+        </div>
+      </div>
 
+    </section>
+      
 <?php
     incluirTemplate ('footer');
 ?>

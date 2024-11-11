@@ -7,7 +7,7 @@
 }
 
 h2 {
-    color: #333;
+    color: #333333;
 }
 
 .navbar-brand {
@@ -15,7 +15,25 @@ h2 {
 }
 
 footer {
-    background-color: #222;
-    color: #aaa;
+    background-color: #222222;
+    color: #aaaaaa;
+}
+.card-img-top{
+    height:250px
+}
+
+
+.carousel-img {
+    height: 500px; 
+    object-fit: cover; 
+    width: 150px;
+}
+
+.caja1{
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+
 }
 
