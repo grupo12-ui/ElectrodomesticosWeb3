@@ -10,35 +10,18 @@ include "../../includes/templates/header.php";
             <legend>Información General</legend>
             <label for="">Nombre</label>
             <input type="text" name="nom" id="nom" placeholder="Nombre" required>
-
             <label for="">Marca</label>
             <input type="text" name="mrc" id="mrc" placeholder="Marca" required>
-
             <label for="">Categoria</label>
             <input type="text" name="cat" id="cat" placeholder="Categoria" required>
-            
             <label for="">Precio</label>
-            <input type="number" name="pre" id="pre" step="0.01" required>
+            <input type="number" name="pre" id="pre" step="0.01"  placeholder="Precio" required>
             <label for="">Stock</label>
-            <input type="number" name="stck" id="stck" step="0.01" required>
-            
-            
-           
+            <input type="number" name="stk" id="stk"  placeholder="Stock" required>
+            <br><br>
         </fieldset>
-        
-       
-        <!--- 
-        <fieldset>
-            <legend>Vendedor</legend>
-            <select name="ven" id="ven" required>
-                <option value="">Seleccione un Producto</option>
-    
-            </select>
-        </fieldset>
-        --->
-            <a href="/ElectrodomesticosWeb3/admin/producto/listar.php" class="boton boton-verde">Volver</a>
-            <input type="submit" value="Registrar Producto" class="boton boton-verde">
-        
+        <a href="/ElectrodomesticosWeb3/admin/indexAdmin.php" class="btn btn-secondary">Volver</a>
+        <input type="submit" value="Registrar Producto" class="btn btn-success"><br><br>
     </form>
 </main>
 

@@ -1,46 +1,29 @@
 <?php
-require 'includes/config/database.php';
-$db = conectarDB();
-$errores = [];
-$email = "";
+    require 'includes/funciones.php';
+    incluirTemplate('header');
+?>
+
+<?php
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+include 'conectar.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo "<pre>";
-    var_dump($_POST);
-    echo "</pre>";
+    $usuario = $_POST['usuario'];
+    $clave = hash('sha256', $_POST['clave']); // Usar SHA-256 en lugar de MD5
 
-    $e = $_POST['email'];
-    $p = $_POST['pas'];
+    $sql = "SELECT * FROM usuario WHERE nombre_usuario = '$usuario' AND clave = '$clave'";
+    $resultado = $conexion->query($sql);
 
-    if (!$e) {
-        $errores[] = "El email es obligatorio.";
-    } 
-    if (!$p) {
-        $errores[] = "El password es obligatorio.";
-    }
-
-    if (empty($errores)) {
-        $con_sql = "SELECT * FROM usuarios WHERE email = '$e'";
-        $res = mysqli_query($db, $con_sql);
-
-        if ($res && $res->num_rows) {
-            $usu = mysqli_fetch_array($res);
-
-            $auth = password_verify($p, $usu['password']);
-
-            if ($auth) {
-                session_start();
-                $_SESSION['usuario'] = $usu['email'];
-                $_SESSION['login'] = true;
-
-                header("Location: /bieenes");
-                exit();
-            } else {
-                $errores[] = "La contraseña es incorrecta.";
-            }
-        } else {
-            $errores[] = "El usuario no existe.";
-        }
+    if ($resultado->num_rows == 1) {
+        $usuario_data = $resultado->fetch_assoc();
+        $_SESSION['usuario'] = $usuario_data['usuario'];
+        $_SESSION['rol'] = $usuario_data['rol'];
+        header("Location: admin/indexAdmin.php");
+        exit();
+    } else {
+        $error = "Usuario o clave incorrecta.";
     }
 }
 ?>
@@ -49,103 +32,53 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .contenedor {
-            max-width: 400px;
-            width: 100%;
-            padding: 20px;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        h1 {
-            text-align: center;
-            color: #333;
-            margin-bottom: 20px;
-        }
-        .errores {
-            background-color: #ffdddd;
-            border-left: 4px solid #f44336;
-            margin-bottom: 20px;
-            padding: 10px;
-        }
-        .errores p {
-            margin: 0;
-            color: #d8000c;
-        }
-        .formulario fieldset {
-            border: none;
-            padding: 0;
-        }
-        .formulario label {
-            display: block;
-            margin-top: 10px;
-            font-weight: bold;
-        }
-        .formulario input[type="email"],
-        .formulario input[type="password"] {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            margin-bottom: 20px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-        }
-        .boton-verde {
-            background-color: #28a745;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-        .boton-verde:hover {
-            background-color: #218838;
-        }
-    </style>
+    <title>Login</title>
 </head>
 <body>
+    <div class="row">
+        <div class="col-md-6">
+            <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2000">
+                <div class="carousel-inner">
+                    <?php
+                        // Para la primera imagen, se añade la clase "active"
+                        echo "<div class='carousel-item active'>";
+                        echo "<img src='build/img/imgProd/" . rand(1, 20) . ".png' class='d-block w-100' style='height:500px' >";
+                        echo "</div>";
 
-<main class="contenedor">
-    <h1>Iniciar Sesión</h1>
-
-    <!-- Mostrar errores -->
-    <?php if (!empty($errores)) : ?>
-        <div class="errores">
-            <?php foreach ($errores as $error) : ?>
-                <p><?php echo $error; ?></p>
-            <?php endforeach; ?>
+                        // Para las siguientes imágenes, no se usa "active"
+                        for ($i = 2; $i <= 3; $i++) {
+                            echo "<div class='carousel-item'>";
+                            echo "<img src='build/img/imgProd/" . rand(1, 20) . ".png' class='d-block w-100' style='height:500px'>";
+                            echo "</div>";
+                        }
+                    ?>
+                </div>
+            </div>
         </div>
-    <?php endif; ?>
+        <div class="col-md-6">
+            <section class="container my-5">
+                <h2>Iniciar Sesión</h2>
+                <form method="post" action="login.php">
+                    <div class="mb-3">
+                        <label for="usuario" class="form-label">Usuario:</label>
+                        <input type="text" class="form-control" name="usuario" required><br>
+                    </div>
+                    
 
-    <form method="POST" class="formulario">
-        <fieldset>
-            <legend>Información de Inicio de Sesión</legend>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                    <label for="clave" class="form-label">Clave:</label>
+                    <input type="password" class="form-control" name="clave" required><br>
 
-            <label for="pas">Contraseña:</label>
-            <input type="password" id="pas" name="pas" placeholder="Tu contraseña" required>
-        </fieldset>
+                    <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+                </form>
 
-        <input type="submit" value="Iniciar sesión" class="boton-verde">
-    </form>
-</main>
-
+                <?php if (isset($error)) { echo "<p style='color:red;'>$error</p>"; } ?>
+            </section>
+        </div>
+    </div>
+    
 </body>
 </html>
+
+<?php
+    incluirTemplate ('footer');
+?>

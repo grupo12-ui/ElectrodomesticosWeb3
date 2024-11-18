@@ -16,7 +16,7 @@ include "../../includes/templates/header.php";
             <?php  
                 include "../../includes/config/database.php";
                 $db = conectarDB();
-                $consql = "SELECT nombre, paterno, materno, telefono, idVendedor FROM vendedor WHERE estado LIKE 'activo'";
+                $consql = "SELECT nombre, paterno, materno, telefono, idvendedor FROM vendedor WHERE estado LIKE 'activo'";
                 $res = mysqli_query($db, $consql);
 
                 if ($res) {
@@ -27,8 +27,8 @@ include "../../includes/templates/header.php";
                         echo "<td>".$reg['materno']."</td>";
                         echo "<td>".$reg['telefono']."</td>";
                         echo "<td>
-                                <a href='eliminar.php?cod=".$reg['idVendedor']."' class='btn btn-danger'>Eliminar</a>
-                                <a href='actualizar.php?cod=".$reg['idVendedor']."' class='btn btn-dark'>Modificar</a>
+                                <a href='eliminar.php?cod=".$reg['idvendedor']."' class='btn btn-danger'>Eliminar</a>
+                                <a href='actualizar.php?cod=".$reg['idvendedor']."' class='btn btn-dark'>Modificar</a>
                               </td>";
                         echo "</tr>";
                     }
@@ -39,8 +39,8 @@ include "../../includes/templates/header.php";
         </tbody>
     </table>
     <div class="botones">
-        <a href="/ElectrodomesticosWeb3/admin/indexAdmin.php" class="boton boton-verde">Volver</a>
-        <a href="../vendedor/crear.php" class="boton boton-verde">Agregar vendedor</a>
+        <a href="/ElectrodomesticosWeb3/admin/indexAdmin.php" class="btn btn-secondary">Volver</a>
+        <a href="../vendedor/crear.php" class="btn btn-primary">Agregar vendedor</a><br><br>
         </div>
 </main>
 <?php

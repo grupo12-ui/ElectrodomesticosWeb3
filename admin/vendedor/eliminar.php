@@ -8,7 +8,7 @@ if ($idv) {
     echo "El id del vendedor es: " . htmlspecialchars($idv);
     include "../../includes/config/database.php";
     $db = conectarDB();
-    $consql = "UPDATE vendedores SET estado = 'inactivo' WHERE idvendedor = $idv";
+    $consql = "UPDATE vendedor SET estado = 'inactivo' WHERE idvendedor = $idv";
     $res = mysqli_query($db, $consql);
  
     if ($res) {

@@ -4,7 +4,6 @@
 ?>
 <main class="contenedor seccion">
     <h1>Crear</h1>
-    <a href="/ElectrodomesticosWeb3/admin/indexAdmin.php" class="boton boton-verde">Volver</a>
     <form method="post" action="registrar.php" class="formulario">
      <fieldset>
          <legend>Informacion General</legend>
@@ -16,10 +15,12 @@
          <input type="text" name="mat" id="mat" placeholder="Apellido Materno">
          <label for="">Telefono:</label>
          <input type="number" name="tel" id="tel" placeholder="Telefono">
-
+         <br><br>
      </fieldset>
-      <input type="submit" value="Registrar Vendedor" class="boton boton-verde">
+        <a href="/ElectrodomesticosWeb3/admin/indexAdmin.php" class="btn btn-secondary">Volver</a>
+      <input type="submit" value="Registrar Vendedor" class="btn btn-success"><br><br>
     </form>
+
 
 </main>
 <?php

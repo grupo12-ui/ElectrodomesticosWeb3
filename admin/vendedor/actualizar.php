@@ -9,7 +9,7 @@ if (!$idv) {
 require "../../includes/config/database.php";
 $db = conectarDB();
 
-$consql = "SELECT * FROM vendedores WHERE idvendedor = ?";
+$consql = "SELECT * FROM vendedor WHERE idvendedor = ?";
 $stmt = mysqli_prepare($db, $consql);
 mysqli_stmt_bind_param($stmt, 'i', $idv);
 mysqli_stmt_execute($stmt);
@@ -22,7 +22,7 @@ if (isset($_POST['modificar'])) {
     $m = $_POST['mat'];
     $t = $_POST['tel'];
 
-    $updateSql = "UPDATE vendedores SET nombre = ?, paterno = ?, materno = ?, telefono = ? WHERE idvendedor = ?";
+    $updateSql = "UPDATE vendedor SET nombre = ?, paterno = ?, materno = ?, telefono = ? WHERE idvendedor = ?";
     $stmt = mysqli_prepare($db, $updateSql);
     mysqli_stmt_bind_param($stmt, 'sssii', $n, $p, $m, $t, $idv);
     $res1 = mysqli_stmt_execute($stmt);
@@ -62,10 +62,10 @@ include "../../includes/templates/header.php";
                 <input type="number" name="tel" id="tel" value="<?php echo htmlspecialchars($reg['telefono']); ?>">
             </fieldset>
  
-            <div class="botones">
-        <a href="/ElectrodomesticosWeb3/admin/vendedor/listar.php" class="boton boton-verde">Volver</a>
-        <input type="submit" value="Modificar vendedor" class="boton boton-verde" name="modificar">
-        </div>
+            <div class="botones"><br>
+                <a href="/ElectrodomesticosWeb3/admin/vendedor/listar.php" class="btn btn-secondary">Volver</a>
+                <input type="submit" value="Modificar vendedor" class="btn btn-primary" name="modificar"><br><br>
+            </div>
         </form>
     <?php else: ?>
         <p>El vendedor no existe.</p>
@@ -73,4 +73,3 @@ include "../../includes/templates/header.php";
 </main>
 
 <?php include "../../includes/templates/footer.php"; ?>
-
