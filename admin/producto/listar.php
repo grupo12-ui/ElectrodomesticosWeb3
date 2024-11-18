@@ -15,7 +15,7 @@
         <tbody>
             <?php
                 include "../../includes/config/database.php";
-                $consql="SELECT * FROM productos"  ;
+                $consql="SELECT * FROM producto"  ;
                 $db=conectarDB();
                 $res=mysqli_query($db,$consql);
                 while($reg=mysqli_fetch_array($res)){

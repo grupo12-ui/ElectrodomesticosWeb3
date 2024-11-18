@@ -16,7 +16,7 @@ include "../../includes/templates/header.php";
             <?php  
                 include "../../includes/config/database.php";
                 $db = conectarDB();
-                $consql = "SELECT nombre, paterno, materno, telefono, idVendedor FROM vendedores WHERE estado LIKE 'activo'";
+                $consql = "SELECT nombre, paterno, materno, telefono, idVendedor FROM vendedor WHERE estado LIKE 'activo'";
                 $res = mysqli_query($db, $consql);
 
                 if ($res) {
